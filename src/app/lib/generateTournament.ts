@@ -16,7 +16,9 @@ export function generateTournament(players: Array<string>): TournamentResult {
       ? getMatchesWithWaitingPlayer(newOrderedPlayers)
       : getMatches(newOrderedPlayers);
 
-    const key = needWaitingPlayer ? newOrderedPlayers[newMid] : currentIndex;
+    const key = needWaitingPlayer
+      ? newOrderedPlayers[newMid]
+      : currentIndex + 1;
 
     tournament[key] = matches;
     currentIndex++;

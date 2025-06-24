@@ -11,15 +11,13 @@ export function Round(props: RoundProps) {
   return (
     <div className="grid grid-cols-2 items-center p-4">
       <p
-        className={`text-3xl text-slate-500 capitalize${
-          props.hasWaitingPlayer ? " flex flex-col gap-1" : ""
+        className={`text-3xl text-slate-500 capitalize flex flex-col gap-1${
+          !props.hasWaitingPlayer ? " items-center" : ""
         }`}
       >
-        {props.hasWaitingPlayer ? (
-          <span className="text-sm">Waiting player:</span>
-        ) : (
-          <></>
-        )}
+        <span className="text-sm">
+          {props.hasWaitingPlayer ? "Waiting player:" : "Round"}
+        </span>
         {props.index}
       </p>
       <div className="flex flex-col gap-2">

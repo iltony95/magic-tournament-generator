@@ -4,6 +4,7 @@ import * as React from "react";
 import { GeneratorForm } from "./GeneratorForm";
 import { useTournament } from "../hooks/useTournament";
 import { Tournament } from "./Tournament";
+import { ChevronRightIcon } from "lucide-react";
 
 export function RenderTournament() {
   const { tournament, initialized, hasWaitingPlayer, resetTournament } =
@@ -50,7 +51,11 @@ export function RenderTournament() {
           <button
             className="btn-circle absolute z-10 my-auto mx-0 top-0 bottom-0 right-4 w-12 h-12 border border-cyan-700 bg-white text-cyan-700 hover:text-white hover:bg-cyan-700 hover:border-transparent"
             onClick={toggleScroll}
-          ></button>
+          >
+            <ChevronRightIcon
+              className={`w-full h-full ${scroll ? "rotate-180" : "rotate-0"}`}
+            />
+          </button>
         </div>
       )}
     </React.Fragment>
