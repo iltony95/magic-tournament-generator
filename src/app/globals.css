@@ -19,7 +19,7 @@
 
 @layer {
   .btn {
-    @apply border-2 px-3 py-2 text-2xl rounded-2xl uppercase transition-all duration-300 ease-in-out cursor-pointer;
+    @apply border-2 px-3 py-2 text-base md:text-2xl rounded-2xl uppercase transition-all duration-300 ease-in-out cursor-pointer;
   }
   .btn-small {
     @apply px-2 py-1 rounded-xl border transition-all duration-200 ease-in-out cursor-pointer;

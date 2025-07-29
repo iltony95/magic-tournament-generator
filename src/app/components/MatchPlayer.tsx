@@ -11,7 +11,7 @@ export function MatchPlayer(props: MatchPlayerProps) {
 
   return (
     <button
-      className={`btn-small border-slate-200 text-black hover:bg-slate-200 hover:text-white ${
+      className={`btn-small border-slate-200 text-slate-900 hover:bg-slate-400 hover:text-white ${
         hasAWinner
           ? isWinnerPlayer
             ? "bg-green-500 border-transparent text-white"

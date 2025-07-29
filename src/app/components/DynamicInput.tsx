@@ -54,7 +54,7 @@ export function DynamicInput(props: DynamicInputProps) {
           htmlFor="internal"
         >
           <input
-            className="outline-0"
+            className="outline-0 text-slate-900 placeholder:text-slate-400"
             type="text"
             name="internal"
             placeholder="Add player..."
@@ -78,7 +78,7 @@ export function DynamicInput(props: DynamicInputProps) {
         <div className="flex items-center flex-wrap gap-2 mt-2">
           {renderElements?.map((s) => (
             <button
-              className="border border-slate-200 px-2 py-1 capitalize rounded-xl flex items-center gap-2 cursor-pointer group hover:bg-red-500 hover:text-white transition-all ease-in-out duration-200"
+              className="border border-slate-200 px-2 py-1 capitalize rounded-xl flex items-center gap-2 cursor-pointer group text-slate-900 hover:bg-red-500 hover:text-white transition-all ease-in-out duration-200"
               key={`elem_${s}`}
               onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
                 removePlayer(e, s)
