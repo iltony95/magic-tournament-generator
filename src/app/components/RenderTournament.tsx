@@ -19,11 +19,13 @@ export function RenderTournament() {
     <React.Fragment>
       {!initialized ? (
         <div className="rounded-2xl bg-white backdrop-blur-sm p-8 shadow-xl flex flex-col gap-4">
-          <h1 className="text-3xl text-center">Tournament Generator</h1>
+          <h1 className="text-3xl text-center text-slate-900">
+            Tournament Generator
+          </h1>
           <GeneratorForm />
         </div>
       ) : (
-        <div className="relative w-11/12 h-11/12 md:w-9/12 bg-white rounded-2xl pt-5 pb-20 pl-5 pr-10 md:pt-10 md:pb-20 md:pl-10 md:pr-20 overflow-x-hidden">
+        <div className="relative w-11/12 h-[90dvh] md:w-9/12 bg-white rounded-2xl pt-5 pb-20 pl-5 pr-10 md:pt-10 md:pb-20 md:pl-10 md:pr-20 overflow-x-hidden">
           <div
             className={`scrollbar-hidden w-[calc(200%+60px)] md:w-[calc(200%+80px)] h-full overflow-x-scroll flex items-center gap-5 md:gap-x-20 transition-transform duration-300 ease-in-out ${
               scroll
@@ -38,9 +40,9 @@ export function RenderTournament() {
               />
             </div>
             <div className={`w-full h-full`}>
-              <h2>Classifica</h2>
+              <h2 className="text-slate-900">Classifica</h2>
               <ul>
-                <li>PRIMO</li>
+                <li className="text-slate-900">PRIMO</li>
               </ul>
             </div>
           </div>

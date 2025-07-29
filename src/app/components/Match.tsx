@@ -3,15 +3,18 @@
 import * as React from "react";
 import { Match as MatchS } from "../utils/schemas";
 import { MatchPlayer } from "./MatchPlayer";
+import { useMatches } from "../hooks/useMatches";
 
 interface MatchProps {
   match: MatchS;
 }
 export function Match(props: MatchProps) {
   const [winnerPlayer, setWinnerPlayer] = React.useState<string>("");
+  const { updateMatches } = useMatches();
 
   function onClick(player: string) {
     setWinnerPlayer(player);
+    updateMatches([{ match: props.match, winnerPlayer: player }]);
   }
 
   return (
